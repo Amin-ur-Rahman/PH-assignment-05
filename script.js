@@ -86,6 +86,7 @@ document.querySelectorAll(".copy-btn").forEach((button) => {
     copyCount++;
     copyBlock.innerText = copyCount;
     button.closest(".cards").querySelector(".copy-btn").innerText = "Copied!";
+    alert(`number copied: ${copiedNumber}`);
   });
 });
 
