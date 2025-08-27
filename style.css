@@ -13,15 +13,26 @@
     rgba(1, 50, 35, 1)
   );
 }
-#main-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 20px;
+
+@media screen and (min-width: 768px) {
+  #main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+  #history-block {
+    grid-column: 4 / 5;
+    grid-row: 1 / 4;
+  }
 }
-#history-block {
-  grid-column: 4 / 5;
-  grid-row: 1 / 4;
+@media screen and (max-width: 767px) {
+  #main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
 }
 
 .new-history {
