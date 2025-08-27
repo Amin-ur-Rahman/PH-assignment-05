@@ -18,7 +18,7 @@ document.querySelectorAll(".heart").forEach((heart) => {
     count++;
     // console.log(count);
 
-    heartBlock.innerText = count;
+    heartBlock.textContent = count;
   });
 });
 // console.log(hearts);
@@ -31,11 +31,13 @@ for (const button of callButtons) {
     }
     alert(
       `calling ${
-        button.closest(".cards").querySelector(".service-name").innerText
-      }: ${button.closest(".cards").querySelector(".service-number").innerText}`
+        button.closest(".cards").querySelector(".service-name").textContent
+      }: ${
+        button.closest(".cards").querySelector(".service-number").textContent
+      }`
     );
     coinBlockValue = coinBlockValue - 20;
-    coinBlock.innerText = coinBlockValue;
+    coinBlock.textContent = coinBlockValue;
 
     // creating new history
     const newHist = document.createElement("div");
@@ -47,15 +49,15 @@ for (const button of callButtons) {
     // getting the service name as heading
     const serviceHeading = button
       .closest(".cards")
-      .querySelector(".service-name").innerText;
-    heading.innerText = serviceHeading;
+      .querySelector(".service-name").textContent;
+    heading.textContent = serviceHeading;
 
     // creating a p tag to hold service number
     const NumberBlock = document.createElement("p");
     const serviceNumber = button
       .closest(".cards")
-      .querySelector(".service-number").innerText;
-    NumberBlock.innerText = serviceNumber;
+      .querySelector(".service-number").textContent;
+    NumberBlock.textContent = serviceNumber;
 
     // appending the service name and number into infoBlock
     const infoBlock = document.createElement("div");
@@ -67,7 +69,7 @@ for (const button of callButtons) {
 
     const timeBlock = document.createElement("div");
     const timeStamp = new Date().toLocaleTimeString();
-    timeBlock.innerText = timeStamp;
+    timeBlock.textContent = timeStamp;
 
     newHist.appendChild(infoBlock);
     newHist.appendChild(timeBlock);
@@ -80,12 +82,12 @@ document.querySelectorAll(".copy-btn").forEach((button) => {
   button.addEventListener("click", () => {
     const copiedNumber = button
       .closest(".cards")
-      .querySelector(".service-number").innerText;
+      .querySelector(".service-number").textContent;
     // console.log(copiedNumber);
     navigator.clipboard.writeText(copiedNumber);
     copyCount++;
-    copyBlock.innerText = copyCount;
-    button.closest(".cards").querySelector(".copy-btn").innerText = "Copied!";
+    copyBlock.textContent = copyCount;
+    button.closest(".cards").querySelector(".copy-btn").textContent = "Copied!";
     alert(`number copied: ${copiedNumber}`);
   });
 });
