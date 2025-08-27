@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
+
+@layer utilities {
+  .madurai {
+    font-family: "Hind Madurai", sans-serif;
+  }
+  .linear-green {
+    background: linear-gradient(
+      to right,
+      rgba(1, 50, 35, 1),
+      rgba(0, 103, 71, 1),
+      rgba(1, 50, 35, 1)
+    );
+  }
+}
