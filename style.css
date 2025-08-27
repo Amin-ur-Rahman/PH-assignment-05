@@ -2,16 +2,37 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
 
-@layer utilities {
-  .madurai {
-    font-family: "Hind Madurai", sans-serif;
-  }
-  .linear-green {
-    background: linear-gradient(
-      to right,
-      rgba(1, 50, 35, 1),
-      rgba(0, 103, 71, 1),
-      rgba(1, 50, 35, 1)
-    );
-  }
+.madurai {
+  font-family: "Hind Madurai", sans-serif;
+}
+.linear-green {
+  background: linear-gradient(
+    to right,
+    rgba(1, 50, 35, 1),
+    rgba(0, 103, 71, 1),
+    rgba(1, 50, 35, 1)
+  );
+}
+#main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+#history-block {
+  grid-column: 4 / 5;
+  grid-row: 1 / 4;
+}
+
+.new-history {
+  background-color: rgba(128, 128, 128, 0.1);
+  margin-block-end: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trans-btn:hover {
+  cursor: pointer;
 }
