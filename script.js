@@ -29,13 +29,10 @@ for (const button of callButtons) {
       alert("You don't have enough coins! minimum 20 coins needed for a call");
       return;
     }
-    alert(
-      `calling ${
-        button.closest(".cards").querySelector(".service-name").textContent
-      }: ${
-        button.closest(".cards").querySelector(".service-number").textContent
-      }`
-    );
+
+    const serviceNameScoped = button.closest(".cards").querySelector(".service-name").innerText;
+    const serviceNumberScoped = button.closest(".cards"). querySelector(".service-number").innerText;
+    alert(`Cslling ${serviceNameScoped}: ${serviceNumberScoped}`)
     coinBlockValue = coinBlockValue - 20;
     coinBlock.textContent = coinBlockValue;
 
